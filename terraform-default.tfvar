@@ -1,0 +1,9 @@
+
+admin_username = "shay"
+env = "default"
+os = {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "16.04-LTS"
+    version   = "latest"
+}
