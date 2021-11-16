@@ -1,0 +1,14 @@
+- name: playbook
+  hosts: webservers
+  become: yes
+  become_user: root
+  tasks:
+    - name: apach
+      yum:
+        name: http
+        state: latest
+    - name: run
+
+      service: 
+        name: httpd
+        state: started
