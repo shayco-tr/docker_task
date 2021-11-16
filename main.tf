@@ -73,7 +73,7 @@ resource "azurerm_virtual_machine" "vm" {
     os_profile_linux_config {
     disable_password_authentication = true
     ssh_keys {
-      key_data = data.azurerm_key_vault_secret.shaypub.value
+      key_data = data.azurerm_key_vault_secret.shaypubb.value
       path     = "/home/shay/.ssh/authorized_keys"
     }
   }
@@ -144,11 +144,11 @@ resource "azurerm_public_ip" "pi" {
 #data "azurerm_resource_group" "ng" {
 #name = "prod_shayv"
 #}
-data "azurerm_key_vault" "shayKeyVaultn" {
-  name                = "shayKeyVaultn"
-  resource_group_name = "default_shayv2"
+data "azurerm_key_vault" "shayKeyVaultnn" {
+  name                = "shayKeyVaultnn"
+  resource_group_name = "default_shayvn2"
 }
-data "azurerm_key_vault_secret" "shaypub" {
-  name         = "shaypub"
-  key_vault_id = "${data.azurerm_key_vault.shayKeyVaultn.id}"
+data "azurerm_key_vault_secret" "shaypubb" {
+  name         = "shaypubb"
+  key_vault_id = "${data.azurerm_key_vault.shayKeyVaultnn.id}"
 }
